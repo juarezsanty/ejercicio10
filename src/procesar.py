@@ -1,5 +1,7 @@
+from crear_diccionario import diccionario_puntos
+
 def procesar_ronda(round, ranking_final):
-    point_in_round ={'Shadow': 0, 'Blaze': 0, 'Viper': 0, 'Reaper': 0, 'Frost':0}
+    point_in_round = diccionario_puntos(round)
     for player_name, player_data in round.items():
         points = procesar_jugador(player_name, player_data, ranking_final)
         point_in_round[player_name] = points
